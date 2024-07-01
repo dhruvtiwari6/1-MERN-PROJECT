@@ -63,7 +63,8 @@ const loginHandler = asyncHandler( async(req ,res) => {
     const options = {
         httpOnly : true,
         secure: true,
-    }
+        sameSite: 'None'
+        }
 
     const LoggedInUser = await User.findOne(newUser._id).select("-password");
     return res
