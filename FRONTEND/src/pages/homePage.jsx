@@ -21,7 +21,7 @@ export default function HomePage() {
         }
 
         try {
-            const response = await axios.post("https://1-mern-project-backend.vercel.app/register", { url: urlEntered });
+            const response = await axios.post("https://1-mern-project-backend.vercel.app/GenerateUrl", { url: urlEntered });
             setUserDetails(response.data.data);
             navigate('/userURL')
         } catch (error) {
