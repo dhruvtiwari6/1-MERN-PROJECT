@@ -15,7 +15,7 @@ const app = express();
 connectDB();
 
 app.use(cors({
-    origin: process.env.CORS_ORIGIN,
+    origin: "https://1-mern-project-frontend.vercel.app",
     credentials: true
 }))
 
