@@ -60,9 +60,9 @@ export default function RegistrationPage() {
 
         try {
             // Register user
-            await axios.post("http://localhost:5003/register", registrationData);
+            await axios.post("https://1-mern-project-backend.vercel.app/register", registrationData);
             // Log in the user immediately after registration
-            await axios.post("http://localhost:5003/login", loginData, { withCredentials: true });
+            await axios.post("https://1-mern-project-backend.vercel.app/login", loginData, { withCredentials: true });
             navigate('/');
         } catch (error) {
             console.error("Registration or login failed:", error);

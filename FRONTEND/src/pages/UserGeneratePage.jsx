@@ -49,7 +49,7 @@ export default function UserGeneratePage() {
                         {UserDetails.map((url) => (
                             <tr key={url.shortId}>
                                 <td style={tdStyle}>
-                                    <a href={`http://localhost:5003/${url.shortId}`} style={linkStyle} target="_blank" rel="noopener noreferrer">
+                                    <a href={`https://1-mern-project-backend.vercel.app/${url.shortId}`} style={linkStyle} target="_blank" rel="noopener noreferrer">
                                         {url.shortId}
                                     </a>
                                 </td>

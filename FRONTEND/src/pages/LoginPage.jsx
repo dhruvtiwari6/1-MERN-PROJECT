@@ -100,7 +100,7 @@ export default function LoginPage() {
         };
 
         try {
-            const response = await axios.post("http://localhost:5003/login", data, { withCredentials: true });
+            const response = await axios.post("https://1-mern-project-backend.vercel.app/login", data, { withCredentials: true });
             console.log(response.data);
             navigate('/');
         } catch (error) {
