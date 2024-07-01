@@ -9,6 +9,10 @@ router.route('/login').post(loginHandler);
 router.route('/Register').post(registerHandle);
 router.route('/GenerateUrl').post(verify_jwt, urlHandle);
 
+router.get('/', (req, res) => {
+    res.status(200).send('<h1>Backend working</h1>'); 
+});
+
 // Redirection route
 router.get('/:shortId', async (req, res) => {
     try {
