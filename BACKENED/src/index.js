@@ -28,10 +28,7 @@ app.use('/', router);
 
 const PORT = process.env.PORT || 3000;  
 
-app.get('/', (req, res)=> {
-    return res.status(200).send("Backened Working");
 
-})
 
 app.listen(PORT, () => {
    console.log(`server is listneing at ${PORT}`)
