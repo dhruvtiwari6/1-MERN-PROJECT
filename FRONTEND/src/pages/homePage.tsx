@@ -57,7 +57,7 @@ export default function HomePage() {
                 ref={urlInputRef}
                 className="block w-full pl-11 pr-12 py-3 text-gray-900 border border-gray-300 rounded-lg 
                          focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200
-                         placeholder:text-gray-400 text-base"
+                         placeholder:text-gray-400 text-base "
                 placeholder="Enter your URL here..."
               />
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
