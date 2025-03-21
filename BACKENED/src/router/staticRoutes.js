@@ -1,12 +1,15 @@
 import express from 'express';
-import { loginHandler, registerHandle } from '../controller/user.controller.js';
+import { loginHandler, registerHandle , OTPCreation, OTPVerification} from '../controller/user.controller.js';
 import { urlHandle } from '../controller/url.controller.js';
 import { verify_jwt } from '../middleware/auth.middleware.js';
 import { url } from '../model/url.model.js';
+
 const router = express.Router();
 
 router.route('/login').post(loginHandler);
 router.route('/Register').post(registerHandle);
+router.route('/verify-otp').post(OTPVerification);
+router.route('/send-otp').post(OTPCreation);
 router.route('/GenerateUrl').post(verify_jwt, urlHandle);
 
 router.get('/', (req, res) => {

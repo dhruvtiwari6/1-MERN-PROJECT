@@ -12,7 +12,7 @@ export const urlHandle = asyncHandler( async(req, res) => {
     const comingURl = await url.findOne({redirectUrl : body.url})
 
 
-       await url.create({
+    await url.create({
         shortId : shortid ,
         redirectUrl : body.url,
         createdBy : req.userID

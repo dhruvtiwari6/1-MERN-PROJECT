@@ -59,7 +59,7 @@ UserSchema.methods.generateAccessToken =  function() {
       return jwt.sign(
           {
               _id: this._id,
-              email: this.email,
+              email: this.email, 
               username: this.username,
           },
           process.env.ACCESS_TOKEN_SECRET,
@@ -76,11 +76,11 @@ UserSchema.methods.generateAccessToken =  function() {
      try {
          return jwt.sign(
              {
-                 _id: this._id,
+                _id: this._id,
              },
              process.env.REFRESH_TOKEN_SECRET,
              {
-                 expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
+                expiresIn: process.env.REFRESH_TOKEN_EXPIRY,
              }
          );
      } catch (error) {

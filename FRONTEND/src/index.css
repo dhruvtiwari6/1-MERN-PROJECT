@@ -1,3 +1,6 @@
+@import "tailwindcss";
+
+
 .navbar {
     display: flex;
     justify-content: flex-end;
